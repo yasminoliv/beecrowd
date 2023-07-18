@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var valor = parseFloat(lines.shift());
+
+        var notas = [100, 50, 20, 10, 5, 2];
+        var moedas = [1, 0.5, 0.25, 0.1, 0.05, 0.01];
+        var quantNotas = [];
+        var quantMoedas = [];
+        var resto = valor;
+
+        for (var i = 0; i < notas.length; i++) {
+        quantNotas[i] = parseInt(resto / notas[i]);
+        resto = resto % notas[i];
+        }
+
+        var restoMoedas = Math.round(resto * 100); 
+
+        for (var i = 0; i < moedas.length; i++) {
+        quantMoedas[i] = parseInt(restoMoedas / (moedas[i] * 100));  
+        restoMoedas = restoMoedas % (moedas[i] * 100); 
+        }
+
+        console.log("NOTAS:");
+        for (var i = 0; i < notas.length; i++) {
+        console.log(quantNotas[i] + " nota(s) de R$ " + notas[i].toFixed(2));
+        }
+
+        console.log("MOEDAS:");
+        for (var i = 0; i < moedas.length; i++) {
+        console.log(quantMoedas[i] + " moeda(s) de R$ " + (moedas[i]).toFixed(2));
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

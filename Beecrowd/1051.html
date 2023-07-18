@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var salario = parseFloat(lines[0]);
+        var imposto;
+
+        if(salario <= 2000.00){
+            imposto = 0.00;
+            
+        }else if (salario <= 3000){
+            imposto = (salario - 2000.00) * 0.08;
+            
+        }else if (salario <= 4500.00){
+            imposto = 1000.00 * 0.08 + (salario - 3000.00 ) * 0.18;
+            
+        }else{
+            imposto = 1000.00 * 0.08 + 1500.00 * 0.18 + (salario - 4500.00) * 0.28;
+        }
+
+        if(imposto === 0.00){
+            console.log("Isento");
+        }
+        else {
+            console.log("R$ " + imposto.toFixed(2));
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var valor = parseInt(lines[0]);
+        var notas = [100, 50, 20, 10, 5, 2, 1];
+
+        console.log(valor);
+
+        for (var i = 0; i < notas.length; i++){
+            var quantidadeNotas = Math.floor(valor / notas[i]);
+            console.log(quantidadeNotas + " nota(s) de R$ " + notas[i] + ",00");
+            valor %= notas[i];
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

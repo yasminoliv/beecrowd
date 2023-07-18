@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+
+        const L = parseInt(lines.shift());
+        const T = lines.shift();
+        const M = [];
+
+        for (let i = 0; i < 12; i++) {
+        const linha = [];
+        for (let j = 0; j < 12; j++) {
+            const valor = parseFloat(lines.shift());
+            linha.push(valor);
+        }
+        M.push(linha);
+        }
+
+        const linhaSelecionada = M[L];
+        const soma = linhaSelecionada.reduce((acc, valor) => acc + valor, 0);
+        const resultado = T === 'S' ? soma : soma / linhaSelecionada.length;
+
+        console.log(resultado.toFixed(1));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

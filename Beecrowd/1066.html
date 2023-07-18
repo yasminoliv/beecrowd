@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+            var quantidadePares = 0;
+            var quantidadeImpares = 0;
+            var quantidadePositivos = 0;
+            var quantidadeNegativos = 0;
+
+            for (var i = 1; i <= 5; i++) {
+            var valor = parseInt(lines.shift());
+
+            if (valor % 2 === 0) {
+                quantidadePares++;
+            } else {
+                quantidadeImpares++;
+            }
+
+            if (valor > 0) {
+                quantidadePositivos++;
+            } else if (valor < 0) {
+                quantidadeNegativos++;
+            }
+            }
+            console.log(quantidadePares + " valor(es) par(es)");
+            console.log(quantidadeImpares + " valor(es) impar(es)");
+            console.log(quantidadePositivos + " valor(es) positivo(s)");
+            console.log(quantidadeNegativos + " valor(es) negativo(s)");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

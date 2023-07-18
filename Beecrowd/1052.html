@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var monthNumber = parseFloat(lines[0]);
+        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        if (monthNumber >= 1 && monthNumber <= 12){
+            var monthName = months[monthNumber - 1];
+            console.log(monthName.charAt(0).toUpperCase() + monthName.substring(1));
+        } else {
+            console.log("Valor do mês inválido");
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

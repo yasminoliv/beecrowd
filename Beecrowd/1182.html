@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+function calcularSoma(coluna, matriz) {
+  let soma = 0;
+  for (let i = 0; i < 12; i++) {
+    soma += matriz[i][coluna];
+  }
+  return soma;
+}
+
+function calcularMedia(coluna, matriz) {
+  let soma = calcularSoma(coluna, matriz);
+  return soma / 12;
+}
+
+const coluna = parseInt(lines.shift());
+const operacao = lines.shift();
+const matriz = [];
+
+for (let i = 0; i < 12; i++) {
+  matriz[i] = [];
+  for (let j = 0; j < 12; j++) {
+    matriz[i][j] = parseFloat(lines.shift());
+  }
+}
+let resultado;
+if (operacao === 'S') {
+  resultado = calcularSoma(coluna, matriz);
+} else if (operacao === 'M') {
+  resultado = calcularMedia(coluna, matriz);
+}
+console.log(resultado.toFixed(1));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

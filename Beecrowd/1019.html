@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var tempoSegundos = parseInt(lines[0]);
+        var tempoFormatado = converterTempo(tempoSegundos);
+
+        function converterTempo(segundos){
+            var horas = Math.floor(segundos / 3600);
+            var minutos = Math.floor((segundos % 3600) / 60);
+            var segundosRestantes = segundos % 60;
+            
+            return `${horas}:${minutos}:${segundosRestantes}`;
+        }
+        console.log(tempoFormatado);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

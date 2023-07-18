@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+            var vetorN = [];
+
+            for (let i = 0; i < 20; i++) {
+                vetorN.push(parseInt(lines.shift()));
+            }
+
+            for (let i = 0; i < 10; i++) {
+                [vetorN[i], vetorN[19 - i]] = [vetorN[19 - i], vetorN[i]];
+            }
+
+            for (let i = 0; i < vetorN.length; i++) {
+                console.log(`N[${i}] = ${vetorN[i]}`);
+            }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
